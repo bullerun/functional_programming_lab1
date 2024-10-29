@@ -12,7 +12,7 @@ let rec print_list lst =
       print_string " ";
       print_list tail
 
-let rec power a b = if b = 0 then 1 else a * power a (b - 1)
+let power a b = float_of_int a ** float_of_int b
 
 (* лучш не запускать :) *)
 (* let recursion =
