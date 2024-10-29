@@ -1,4 +1,4 @@
 (executable
  (public_name lab1)
  (name main)
- (libraries lab1))
+ (libraries task2 task29))

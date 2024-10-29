@@ -1,0 +1,3 @@
+(library
+ (name task2)
+ (modules task2))
