@@ -24,7 +24,7 @@ let () =
    let result = tail_rec 2. 100. 2. 100. in
    Printf.printf "Количество уникальных значений: %d\n" result *)
 let () =
-  print_int (Task29.tail_rec 2 100 2 100);
+  print_int Task29.tail_rec;
   print_newline ()
 
 let () =

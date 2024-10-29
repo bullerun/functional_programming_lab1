@@ -26,16 +26,16 @@ let rec power a b = if b = 0 then 1 else a * power a (b - 1)
    in
    generator 2 2 [] |> List.length *)
 
-let tail_rec min_a max_a min_b max_b =
+let tail_rec =
   let rec generate_powers a b acc =
-    if a > max_a then acc
-    else if b > max_b then generate_powers (a + 1) min_b acc
+    if a > 100 then acc
+    else if b > 100 then generate_powers (a + 1) 2 acc
     else
       let result = power a b in
       let new_acc = if List.mem result acc then acc else result :: acc in
       generate_powers a (b + 1) new_acc
   in
-  List.length (generate_powers min_a min_b [])
+  List.length (generate_powers 2 2 [])
 
 (* Модульное решение *)
 let rec modul_generator a b acc =
