@@ -4,12 +4,6 @@ on:
   - push
   - pull_request
 
-permissions: read-all
-
-on:
-  - push
-  - pull_request
-
 permissions:
   checks: write
   pull-requests: write
