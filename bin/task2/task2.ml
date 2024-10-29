@@ -20,7 +20,9 @@ let module_fibonacci =
   let rec fibonacci a b acc =
     if a > 4_000_000 then acc else fibonacci b (a + b) (a :: acc)
   in
-  fibonacci 0 1 [] |> List.filter (fun x -> x mod 2 = 0) |> List.fold_left ( + ) 0
+  fibonacci 0 1 []
+  |> List.filter (fun x -> x mod 2 = 0)
+  |> List.fold_left ( + ) 0
 
 let while_fibonacci =
   let a = ref 0 in
