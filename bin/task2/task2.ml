@@ -17,10 +17,10 @@ let tail_recursion =
   fibonacci 0 1 0
 
 let module_fibonacci =
-  let rec aux a b acc =
-    if a > 4_000_000 then acc else aux b (a + b) (a :: acc)
+  let rec fibonacci a b acc =
+    if a > 4_000_000 then acc else fibonacci b (a + b) (a :: acc)
   in
-  aux 0 1 [] |> List.filter (fun x -> x mod 2 = 0) |> List.fold_left ( + ) 0
+  fibonacci 0 1 [] |> List.filter (fun x -> x mod 2 = 0) |> List.fold_left ( + ) 0
 
 let while_fibonacci =
   let a = ref 0 in
