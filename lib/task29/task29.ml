@@ -73,3 +73,16 @@ let for_solve =
     done
   done;
   !acc |> List.length
+
+(* patter matching *)
+let pattern_matching =
+  let pairs = generate_pairs 100 100 in
+  let rec unique count seen pairs =
+    match pairs with
+    | [] -> count
+    | (a, b) :: tail ->
+        let value = power a b in
+        if List.mem value seen then unique count seen tail
+        else unique (count + 1) (value :: seen) tail
+  in
+  unique 0 [] pairs

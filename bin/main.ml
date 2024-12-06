@@ -1,21 +1,23 @@
+open Task2
+
 let () =
-  print_int Task2.recursion;
+  print_int recursion;
   print_newline ()
 
 let () =
-  print_int Task2.tail_recursion;
+  print_int tail_recursion;
   print_newline ()
 
 let () =
-  print_int Task2.module_fibonacci;
+  print_int module_fibonacci;
   print_newline ()
 
 let () =
-  print_int Task2.while_fibonacci;
+  print_int while_fibonacci;
   print_newline ()
 
 let () =
-  print_int Task2.infinity_list;
+  print_int infinity_list;
   print_newline ()
 
 let () =

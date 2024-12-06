@@ -44,3 +44,15 @@ let infinity_list =
   |> Seq.take_while (fun x -> x <= 4_000_000)
   |> Seq.filter (fun x -> x mod 2 = 0)
   |> Seq.fold_left ( + ) 0
+
+let rec fibonacci a b acc =
+  if a > 4_000_000 then acc else fibonacci b (a + b) (a :: acc)
+
+let pattern_matching =
+  let rec sum lst summ =
+    match lst with
+    | [] -> summ
+    | head :: tail when head mod 2 = 0 -> sum tail (summ + head)
+    | _ :: tail -> sum tail summ
+  in
+  sum (fibonacci 0 1 []) 0

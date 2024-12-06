@@ -1,2 +1,3 @@
 (library
- (name lab1))
+ (name lab1)
+ (libraries task2 task29))
