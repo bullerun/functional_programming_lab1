@@ -6,6 +6,7 @@ let test_module_solve _ = assert_equal 9183 module_solve
 let test_for_solve _ = assert_equal 9183 for_solve
 let test_map_solve _ = assert_equal 9183 map_solve
 let test_pattern_matching _ = assert_equal 9183 pattern_matching
+
 let suite =
   "TestTask2"
   >::: [

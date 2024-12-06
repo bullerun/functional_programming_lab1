@@ -7,6 +7,7 @@ let test_module_fibonacci _ = assert_equal 4613732 module_fibonacci
 let test_while_fibonacci _ = assert_equal 4613732 while_fibonacci
 let test_infinity_list _ = assert_equal 4613732 infinity_list
 let test_pattern_matching _ = assert_equal 4613732 pattern_matching
+
 let suite =
   "TestTask2"
   >::: [
